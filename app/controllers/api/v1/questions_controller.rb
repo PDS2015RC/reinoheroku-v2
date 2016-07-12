@@ -1,6 +1,8 @@
 class Api::V1::QuestionsController < ApplicationController
     #http_basic_authenticate_with name:"admin", password: "secret"
+    skip_before_action :authenticate_user!
     before_filter :restrict_access
+
     def index
         @questions = Question.all
         respond_to do |format|
