@@ -28,11 +28,15 @@ module Reino
         :address     => 'smtp.gmail.com',
         :domain      => 'gmail.com',
         :port        => 587,
-        :user_name   => "reinodetads@gmail.com",
-        :password    => "geladeira123",
+        :user_name   => "rexwebcompany@gmail.com",
+        :password    => "w3br3xcastanha",
         :authentication => :login,
     }
 
+    config.action_dispatch.default_headers.merge!({
+        'Access-Control-Allow-Origin' => '*',
+        'Access-Control-Request-Method' => '*'
+    })
 
   end
 end

@@ -11,8 +11,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160522201610) do
+ActiveRecord::Schema.define(version: 20160710220309) do
 
+<<<<<<< HEAD
+=======
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
+  create_table "api_keys", force: :cascade do |t|
+    t.string   "access_token"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
+
+>>>>>>> upstream/master
   create_table "badges", force: :cascade do |t|
     t.string   "issuer_url"
     t.string   "issuer_organization"
