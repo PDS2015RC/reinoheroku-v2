@@ -5,12 +5,89 @@ class QuizController < ApplicationController
   def index
     @characters = Character.where(user_id: current_user)
     if(@characters.size >= 1)
-  	   @lesson = Lesson.new(lesson_params)
-  	   @video = @lesson.url
-  	   @questions = Question.where(lesson: @lesson.subject).order("RANDOM()").limit(5)
+        @lesson = Lesson.new(lesson_params)
+        @video = @lesson.url
+        @questions = Question.where(lesson: @lesson.subject).order("RANDOM()").limit(5)
+        @i = 0
+        @life = 3
+        @current_question = @questions[@i]
+        @questions = @questions.ids.map(&:to_s)
+        @score = 0
+        @path = :answer_question_quiz_index
+        @remote = true
     else
       redirect_to characters_url
     end
+  end
+
+  def answer_question
+
+      @life = params[:life].to_i
+      @answer = params[:answer]
+      @statement = params[:statement]
+      @question = Question.where(statement: @statement).first
+      @i = params[:i].to_i
+      @score = params[:score].to_i
+      if (@answer == @question.a)
+        @score = @score + 1
+      else
+        @life = @life.to_i - 1
+      end
+      @i = @i + 1
+      if(@i == 5 && @life > 0)
+      @question = Question.where(statement: params[:statement]).first
+      @lesson = Lesson.where(subject: @question.lesson).first
+      @character = Character.where(user_id: current_user).first
+      @win = false
+      @result = @score
+      @done_lessons = DoneLesson.where("lesson_id = ? AND character_id = ?", @lesson.id, @character.id).order(id: :asc).first
+
+      if @done_lesson == nil
+        @done_lesson = DoneLesson.new
+        @done_lesson.lesson_id = @lesson.id
+        @done_lesson.character_id = @character.id
+        @done_lesson.score = @result
+        @done_lesson.save
+        @xp_mult = @result * 10
+        @gold_mult = @result * 5
+        @character.correct += @result
+        @character.wrong += 5 - @result
+        @character.xp += @xp_mult
+        @character.gold += @gold_mult
+        @win = true
+      if @character.xp >= 200
+        @character.xp = 0
+        @character.level += 1
+      end
+        @character.save
+      elsif @done_lesson.score < @result
+        @done_lesson.score = @result
+        @done_lesson.save
+        @xp_mult = @result * 10
+        @gold_mult = @result * 5
+        @character.correct += @result
+        @character.wrong += 5 - @result
+        @character.xp += @xp_mult
+        @character.gold += @gold_mult
+        @win = true
+      if @character.xp >= 200
+        @character.xp = 0
+        @character.level += 1
+      end
+        @character.save
+      end
+      respond_to do |format|
+        format.js {render :template => "quiz/answer.js.erb"}
+      end
+
+    else
+      @questions = params[:questions]
+      @current_question = @questions[@i]
+      @current_question = Question.find(@current_question)
+      respond_to do |format|
+        format.js {}
+      end
+  end
   end
 
   def catalog
@@ -18,92 +95,18 @@ class QuizController < ApplicationController
       @character = Character.where(user_id: current_user).first
       @done_lessons = DoneLesson.where(character_id: @character.id)
     end
-  end  
-  
+  end
+
   def gerar_quiz
-  	
+
   end
 
   def answer
-    @answer1 = params[:answer1]
-    @answer2 = params[:answer2]
-    @answer3 = params[:answer3]
-    @answer4 = params[:answer4]
-    @answer5 = params[:answer5]  
-    @statement1 = params[:statement1]
-    @statement2 = params[:statement2]
-    @statement3 = params[:statement3]
-    @statement4 = params[:statement4]
-    @statement5 = params[:statement5]
-    @question1 = Question.where(statement: @statement1).first
-    @question2 = Question.where(statement: @statement2).first
-    @question3 = Question.where(statement: @statement3).first
-    @question4 = Question.where(statement: @statement4).first
-    @question5 = Question.where(statement: @statement5).first
-    @answers = [@answer1, @answer2, @answer3, @answer4, @answer5]
-    @lesson = Lesson.where(subject: @question1.lesson).first
-    @character = Character.where(user_id: current_user).first
-    @win = false
-    @questions_answers = [@question1.a, @question2.a, @question3.a, @question4.a, @question5.a] 
-    @result = 0
-
-    for i in 0..4 do
-      if (@answers[i] == @questions_answers[i])
-         @result = @result + 1
-      end  
-    end  
-
-    @done_lessons = DoneLesson.where("lesson_id = ? AND character_id = ?", @lesson.id, @character.id).order(id: :asc).first 
-
-    if @done_lesson == nil
-      @done_lesson = DoneLesson.new
-      @done_lesson.lesson_id = @lesson.id
-      @done_lesson.character_id = @character.id
-      @done_lesson.score = @result
-      @done_lesson.save
-      @xp_mult = @result * 10
-      @gold_mult = @result * 5 
-      @character.correct += @result
-      @character.wrong += 5 - @result
-      @character.xp += @xp_mult
-      @character.gold += @gold_mult
-      @win = true
-    if @character.xp >= 200 
-      @character.xp = 0
-      @character.level += 1
-    end
-      @character.save
-    elsif @done_lesson.score < @result
-      @done_lesson.score = @result  
-      @done_lesson.save
-      @xp_mult = @result * 10
-      @gold_mult = @result * 5 
-      @character.correct += @result
-      @character.wrong += 5 - @result
-      @character.xp += @xp_mult
-      @character.gold += @gold_mult
-      @win = true
-    if @character.xp >= 200 
-      @character.xp = 0
-      @character.level += 1
-    end
-      @character.save
-    end
-
-    if @result == 5
-      @new_badge = LineBadge.new
-      @new_badge.badge_id = 1
-      @new_badge.user_id = current_user.id
-      @new_badge.earner_email = current_user.email
-      @new_badge.save
-    end 
-    
-
-  end  
+  end
 
   def lesson_params
       params.permit(:subject, :url)
   end
 
-  
+
 end
