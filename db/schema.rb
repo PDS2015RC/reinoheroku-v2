@@ -13,6 +13,9 @@
 
 ActiveRecord::Schema.define(version: 20160710220309) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "api_keys", force: :cascade do |t|
     t.string   "access_token"
     t.datetime "created_at",   null: false
@@ -49,7 +52,7 @@ ActiveRecord::Schema.define(version: 20160710220309) do
     t.integer  "wrong"
   end
 
-  add_index "characters", ["user_id"], name: "index_characters_on_user_id"
+  add_index "characters", ["user_id"], name: "index_characters_on_user_id", using: :btree
 
   create_table "done_lessons", force: :cascade do |t|
     t.integer  "lesson_id"
@@ -59,8 +62,8 @@ ActiveRecord::Schema.define(version: 20160710220309) do
     t.integer  "score"
   end
 
-  add_index "done_lessons", ["character_id"], name: "index_done_lessons_on_character_id"
-  add_index "done_lessons", ["lesson_id"], name: "index_done_lessons_on_lesson_id"
+  add_index "done_lessons", ["character_id"], name: "index_done_lessons_on_character_id", using: :btree
+  add_index "done_lessons", ["lesson_id"], name: "index_done_lessons_on_lesson_id", using: :btree
 
   create_table "drag_drops", force: :cascade do |t|
     t.string   "lesson"
@@ -83,7 +86,7 @@ ActiveRecord::Schema.define(version: 20160710220309) do
     t.datetime "updated_at", null: false
   end
 
-  add_index "inventories", ["user_id"], name: "index_inventories_on_user_id"
+  add_index "inventories", ["user_id"], name: "index_inventories_on_user_id", using: :btree
 
   create_table "items", force: :cascade do |t|
     t.string   "name"
@@ -109,8 +112,8 @@ ActiveRecord::Schema.define(version: 20160710220309) do
     t.string   "earner_email"
   end
 
-  add_index "line_badges", ["badge_id"], name: "index_line_badges_on_badge_id"
-  add_index "line_badges", ["user_id"], name: "index_line_badges_on_user_id"
+  add_index "line_badges", ["badge_id"], name: "index_line_badges_on_badge_id", using: :btree
+  add_index "line_badges", ["user_id"], name: "index_line_badges_on_user_id", using: :btree
 
   create_table "line_items", force: :cascade do |t|
     t.integer  "item_id"
@@ -119,8 +122,8 @@ ActiveRecord::Schema.define(version: 20160710220309) do
     t.datetime "updated_at",   null: false
   end
 
-  add_index "line_items", ["inventory_id"], name: "index_line_items_on_inventory_id"
-  add_index "line_items", ["item_id"], name: "index_line_items_on_item_id"
+  add_index "line_items", ["inventory_id"], name: "index_line_items_on_inventory_id", using: :btree
+  add_index "line_items", ["item_id"], name: "index_line_items_on_item_id", using: :btree
 
   create_table "objective_images", force: :cascade do |t|
     t.string   "lesson"
@@ -183,7 +186,15 @@ ActiveRecord::Schema.define(version: 20160710220309) do
     t.boolean  "admin"
   end
 
-  add_index "users", ["email"], name: "index_users_on_email", unique: true
-  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+  add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
+  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
+  add_foreign_key "characters", "users"
+  add_foreign_key "done_lessons", "characters"
+  add_foreign_key "done_lessons", "lessons"
+  add_foreign_key "inventories", "users"
+  add_foreign_key "line_badges", "badges"
+  add_foreign_key "line_badges", "users"
+  add_foreign_key "line_items", "inventories"
+  add_foreign_key "line_items", "items"
 end
