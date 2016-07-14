@@ -49,6 +49,7 @@ Rails.application.routes.draw do
   resources :quiz do
     collection do
       post :answer
+      post 'answer_question'
     end
   end
 

@@ -1,0 +1,37 @@
+<%= form_tag(@path, method: 'post', :remote => true) do%>
+
+                <div class="panel-default">
+                  <div class="panel panel-info">
+                    <p id="life">Life: <%=@life %> Score: <%=@score %></p>
+                    <div class="panel-heading"><%= @current_question.statement %></div>
+                    <div class="panel-body">
+                      <div class="input-group">
+                        <% @alternativas = [@current_question.a, @current_question.b, @current_question.c, @current_question.d] %>
+                        <% @alternativas.shuffle! %>
+
+                        <%= radio_button_tag "answer", @alternativas[0] %><%= @alternativas[0] %><br>
+                        <%= radio_button_tag "answer", @alternativas[1] %><%= @alternativas[1] %><br>
+                        <%= radio_button_tag "answer", @alternativas[2] %><%= @alternativas[2] %><br>
+                        <%= radio_button_tag "answer", @alternativas[3] %><%= @alternativas[3] %><br>
+                        <%= hidden_field_tag "statement", @current_question.statement %>
+                        <%= hidden_field_tag "i", @i%>
+                        <%= hidden_field_tag "life", @life%>
+                        <%= hidden_field_tag "score", @score%>
+                        <% @questions.each do |question| %>
+                          <%= hidden_field_tag "questions[]", question %>
+                        <% end %>
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+
+          <!--Botão pronto-->
+          <div class="text-center">
+            <div class="btn-group">
+              <%= submit_tag "Terminei", class: "btn btn-success btn-lg" %>
+              <!--<button type="button" class="btn btn-success btn-lg" id="responder">Terminei</button>-->
+            </div>
+          </div>
+          <% end %>
