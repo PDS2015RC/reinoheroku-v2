@@ -14,11 +14,11 @@
 </div>
 <% else %>
 <div class="col-xs-4 alert alert-danger text-center" role="alert">
-	<h2>Acertou <%= @result %> Questões, menos que a ultima vez</h2>
+	<h2>Perdeu, Tente novamente</h2>
 	<h2>Não houve ganhos</h2>
 	<br>
 	<div class="btn-group">
-	<%= button_to 'Voltar', characters_url, :method => :get, class: "btn btn-danger dropdown-toggle" %>
+	<%= button_to 'Voltar', quiz_catalog_path, :method => :get, class: "btn btn-danger dropdown-toggle" %>
 
 	</div>
 </div>

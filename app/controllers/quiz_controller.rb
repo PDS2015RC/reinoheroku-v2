@@ -9,7 +9,8 @@ class QuizController < ApplicationController
         @video = @lesson.url
         @questions = Question.where(lesson: @lesson.subject).order("RANDOM()").limit(5)
         @i = 0
-        @life = 3
+        @character_life = 3 #TO-DO, character must have life attribute
+        @life = @character_life
         @current_question = @questions[@i]
         @questions = @questions.ids.map(&:to_s)
         @score = 0
@@ -26,6 +27,7 @@ class QuizController < ApplicationController
       @answer = params[:answer]
       @statement = params[:statement]
       @question = Question.where(statement: @statement).first
+      @character_life = params[:character_life].to_i
       @i = params[:i].to_i
       @score = params[:score].to_i
       if (@answer == @question.a)
@@ -35,51 +37,55 @@ class QuizController < ApplicationController
       end
       @i = @i + 1
       if(@i == 5 && @life > 0)
-      @question = Question.where(statement: params[:statement]).first
-      @lesson = Lesson.where(subject: @question.lesson).first
-      @character = Character.where(user_id: current_user).first
-      @win = false
-      @result = @score
-      @done_lessons = DoneLesson.where("lesson_id = ? AND character_id = ?", @lesson.id, @character.id).order(id: :asc).first
+        @question = Question.where(statement: params[:statement]).first
+        @lesson = Lesson.where(subject: @question.lesson).first
+        @character = Character.where(user_id: current_user).first
+        @win = false
+        @result = @score
+        @done_lessons = DoneLesson.where("lesson_id = ? AND character_id = ?", @lesson.id, @character.id).order(id: :asc).first
 
-      if @done_lesson == nil
-        @done_lesson = DoneLesson.new
-        @done_lesson.lesson_id = @lesson.id
-        @done_lesson.character_id = @character.id
-        @done_lesson.score = @result
-        @done_lesson.save
-        @xp_mult = @result * 10
-        @gold_mult = @result * 5
-        @character.correct += @result
-        @character.wrong += 5 - @result
-        @character.xp += @xp_mult
-        @character.gold += @gold_mult
-        @win = true
-      if @character.xp >= 200
-        @character.xp = 0
-        @character.level += 1
-      end
-        @character.save
-      elsif @done_lesson.score < @result
-        @done_lesson.score = @result
-        @done_lesson.save
-        @xp_mult = @result * 10
-        @gold_mult = @result * 5
-        @character.correct += @result
-        @character.wrong += 5 - @result
-        @character.xp += @xp_mult
-        @character.gold += @gold_mult
-        @win = true
-      if @character.xp >= 200
-        @character.xp = 0
-        @character.level += 1
-      end
-        @character.save
-      end
+        if @done_lesson == nil
+          @done_lesson = DoneLesson.new
+          @done_lesson.lesson_id = @lesson.id
+          @done_lesson.character_id = @character.id
+          @done_lesson.score = @result
+          @done_lesson.save
+          @xp_mult = @result * 10
+          @gold_mult = @result * 5
+          @character.correct += @result
+          @character.wrong += 5 - @result
+          @character.xp += @xp_mult
+          @character.gold += @gold_mult
+          @win = true
+          if @character.xp >= 200
+            @character.xp = 0
+            @character.level += 1
+          end
+          @character.save
+        elsif @done_lesson.score < @result
+          @done_lesson.score = @result
+          @done_lesson.save
+          @xp_mult = @result * 10
+          @gold_mult = @result * 5
+          @character.correct += @result
+          @character.wrong += 5 - @result
+          @character.xp += @xp_mult
+          @character.gold += @gold_mult
+          @win = true
+          if @character.xp >= 200
+            @character.xp = 0
+            @character.level += 1
+          end
+          @character.save
+        end
       respond_to do |format|
         format.js {render :template => "quiz/answer.js.erb"}
       end
-
+    elsif @life <=0
+          @win = false
+          respond_to do |format|
+            format.js {render :template => "quiz/answer.js.erb"}
+          end
     else
       @questions = params[:questions]
       @current_question = @questions[@i]
