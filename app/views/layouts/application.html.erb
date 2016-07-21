@@ -2,8 +2,13 @@
 <html>
 <head>
   <title>Reino</title>
-  <%= stylesheet_link_tag 'application','__packed', 'fontello/css/fontello', 'fontello/css/animation', 'styles', 'shortcodes', 'responsive', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag '__packed', 'fontello/css/fontello', 'fontello/css/animation', 'styles', 'shortcodes',  media: 'all', 'data-turbolinks-track' => true %>
+  <!--<%= stylesheet_link_tag 'application','__packed', 'fontello/css/fontello', 'fontello/css/animation', 'styles', 'shortcodes', 'responsive', media: 'all', 'data-turbolinks-track' => true %>-->
+
+  <style id='theme-skin-inline-css' type='text/css'></style>
+
+  <%= stylesheet_link_tag 'responsive' %>
+
   <%= csrf_meta_tags %>
   <script type="text/javascript" src="/assets/html5-canvas-game-character-1.js"></script>
 </head>
@@ -18,6 +23,7 @@
   </div> <!-- /.boxedWrap -->
 </div> <!-- /.main_content -->
 
+  <%= javascript_include_tag 'vendor/jquery-1.11.3.min', 'vendor/jquery-migrate.min', 'vendor/revslider/rs-plugin/js/jquery.themepunch.tools.min', 'vendor/revslider/rs-plugin/js/jquery.themepunch.revolution.min', 'custom/__main', 'vendor/__packed', 'custom/shortcodes_init', 'custom/_utils', 'custom/_front' %>
 
 </body>
 </html>
