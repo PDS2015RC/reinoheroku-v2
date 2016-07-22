@@ -1,82 +1,111 @@
-<div class="columnsWrap sc_columns no_margin sc_columns_count_4 margin_top_small">
-    <div class="columns1_4 sc_column_item sc_column_item_1 odd first"></div>
-    <div class="columns2_4 sc_column_item sc_column_item_2 even span_2">
-      <div class="sc_contact_form sc_contact_form_contact contact_form_1">
-        <!--<form class="contact_1" method="post" action="include/contact-form.php">-->
-        <h1 class="text-center">Log in</h1>
-        <%= form_for(resource, as: resource_name, url: session_path(resource_name), :html => {:class => 'contact_1'}) do |f| %>
-          <div class="columns4_4">
-            <%= f.label :email %>
-            <%= f.text_field :email, :id => 'contact_form_email', :placeholder => 'email' %>
-            <!--<label class="required" for="contact_form_email">-->
-              <!--E-mail-->
-            <!--</label> <input type="text" name="email" id="contact_form_email" placeholder="Email">-->
-          </div>
-          <br>
-          <div class="columns4_4">
-            <!--<label class="required" for="contact_form_subj">Subject</label>-->
-            <!--<input type="text" name="subject" id="contact_form_subj" placeholder="Subject">-->
-            <%= f.label :password %><br />
-            <%= f.password_field :password, :id => 'contact_form_subj', autocomplete: "off" %>
-          </div>
-          <br>
-          <div class="sc_contact_form_button">
-            <div class="squareButton sc_button_size sc_button_style_global global ico">
-              <!--<button type="submit" name="contact_submit" class="contact_form_submit icon-comment-1">Send Message</button>-->
-              <%= f.submit "Login", :class => "contact_form_submit icon-comment-1" %>
+<section class="no_padding skyblue_section">
+  <div class="container">
+    <div class="">
+      <div class="sc_parallax dark" data-parallax-speed="0.3" data-parallax-x-pos="50%" data-parallax-y-pos="50%">
+        <div class="sc_parallax_content parallax_image_1">
+          <div class="sc_content main ">
+            <div class="columnsWrap sc_columns sc_columns_count_2">
+              <div class="columns1_2 sc_column_item sc_column_item_1 odd first">
+              </div>
+              <div class="columns1_2 sc_column_item sc_column_item_2 even">
+                <h1 class="sc_title style_2 sc_title_regular font_ubuntu text_uppercase title_type_1">Pre-screened, qualified and responsible babysitter</h1>
+                <div class="text_md">
+                  <p>Find great child care for your family at reasonable price. Simply drop us a few lines and we will pick the best option for you.</p>
+                </div>
+                <div class="sc_button sc_button_style_global sc_button_size_huge curveButton squareButton global huge">
+                  <a href="#" class="">Purchase</a>
+                </div>
+                <div class="sc_button sc_button_style_global sc_button_size_huge curveButton right short squareButton global huge">
+                  <a href="#" class="">More</a>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="result sc_infobox"></div>
-
-            <br>
-            <br>
-            <span><%= render "devise/shared/links" %></span>
-        <% end %>
-        <!--</form>-->
+        </div>
       </div>
-
     </div>
+  </div>
+</section>
+<section>
+    <div class="container">
+        <div class="columns1_4 sc_column_item sc_column_item_1 odd first"></div>
+        <div class="columns2_4 sc_column_item sc_column_item_2 even span_2">
+          <div class="sc_contact_form sc_contact_form_contact contact_form_1">
+            <!--<form class="contact_1" method="post" action="include/contact-form.php">-->
+            <h1 class="text-center">Log in</h1>
+            <%= form_for(resource, as: resource_name, url: session_path(resource_name), :html => {:class => 'contact_1'}) do |f| %>
+              <div class="columns4_4">
+                <%= f.label :email %>
+                <%= f.text_field :email, :id => 'contact_form_email', :placeholder => 'email' %>
+                <!--<label class="required" for="contact_form_email">-->
+                  <!--E-mail-->
+                <!--</label> <input type="text" name="email" id="contact_form_email" placeholder="Email">-->
+              </div>
+              <br>
+              <div class="columns4_4">
+                <!--<label class="required" for="contact_form_subj">Subject</label>-->
+                <!--<input type="text" name="subject" id="contact_form_subj" placeholder="Subject">-->
+                <%= f.label :password %><br />
+                <%= f.password_field :password, :id => 'contact_form_subj', autocomplete: "off" %>
+              </div>
+              <br>
+              <div class="sc_contact_form_button">
+                <div class="squareButton sc_button_size sc_button_style_global global ico">
+                  <!--<button type="submit" name="contact_submit" class="contact_form_submit icon-comment-1">Send Message</button>-->
+                  <%= f.submit "Login", :class => "contact_form_submit icon-comment-1" %>
+                </div>
+              </div>
+              <div class="result sc_infobox"></div>
+
+                <br>
+                <br>
+                <span><%= render "devise/shared/links" %></span>
+            <% end %>
+            <!--</form>-->
+          </div>
+
+        </div>
 
 
-  <div class="columns1_4 sc_column_item sc_column_item_4 even after_span_2"></div>
-</div>
+      <div class="columns1_4 sc_column_item sc_column_item_4 even after_span_2"></div>
+    </div>
+</section>
+        <!--<div class="sc_contact_form sc_contact_form_contact contact_form_1">-->
+          <!--<br />-->
+          <!--<h1 class="text-center">Log in</h1>-->
 
-    <!--<div class="sc_contact_form sc_contact_form_contact contact_form_1">-->
-      <!--<br />-->
-      <!--<h1 class="text-center">Log in</h1>-->
+          <!--<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>-->
+            <!--<div class="columnsWrap">-->
+              <!--<div class="columns1_3">-->
+                <!--<%= f.label :email %> -->
+        <!--<br />-->
+                <!--<%= f.email_field :email, :class => '', :placeholder => 'email' %>-->
+              <!--</div>-->
+                  <!--<br>-->
+              <!--<div class="columns1_3">-->
+                <!--<%= f.label :password %>-->
+        <!--<br />-->
+                <!--<%= f.password_field :password, :class => '', autocomplete: "off" %>-->
+              <!--</div>-->
 
-      <!--<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>-->
-        <!--<div class="columnsWrap">-->
-          <!--<div class="columns1_3">-->
-            <!--<%= f.label :email %> -->
-    <!--<br />-->
-            <!--<%= f.email_field :email, :class => '', :placeholder => 'email' %>-->
-          <!--</div>-->
-              <!--<br>-->
-          <!--<div class="columns1_3">-->
-            <!--<%= f.label :password %>-->
-    <!--<br />-->
-            <!--<%= f.password_field :password, :class => '', autocomplete: "off" %>-->
-          <!--</div>-->
+              <!--<% if devise_mapping.rememberable? -%>-->
+                <!--<div class="form-group field">-->
+                  <!--<%= f.check_box :remember_me %>-->
+                  <!--<%= f.label :remember_me %>-->
+                <!--</div>-->
+              <!--<% end -%>-->
 
-          <!--<% if devise_mapping.rememberable? -%>-->
-            <!--<div class="form-group field">-->
-              <!--<%= f.check_box :remember_me %>-->
-              <!--<%= f.label :remember_me %>-->
+              <!--<div class="sc_button sc_button_style_dark sc_button_size_mini squareButton dark mini">-->
+                <!--&lt;!&ndash;<a href="">ajsdçflkasdjçflkjasd</a>&ndash;&gt;-->
+                <!--<%= f.submit "Login", :class => "aligncenter " %>-->
+              <!--</div>-->
+                  <!--<br>-->
+                  <!--<br>-->
+              <!--<span><%= render "devise/shared/links" %></span>-->
             <!--</div>-->
-          <!--<% end -%>-->
+          <!--<% end %>-->
 
-          <!--<div class="sc_button sc_button_style_dark sc_button_size_mini squareButton dark mini">-->
-            <!--&lt;!&ndash;<a href="">ajsdçflkasdjçflkjasd</a>&ndash;&gt;-->
-            <!--<%= f.submit "Login", :class => "aligncenter " %>-->
           <!--</div>-->
-              <!--<br>-->
-              <!--<br>-->
-          <!--<span><%= render "devise/shared/links" %></span>-->
-        <!--</div>-->
-      <!--<% end %>-->
-
-      <!--</div>-->
 
 
 

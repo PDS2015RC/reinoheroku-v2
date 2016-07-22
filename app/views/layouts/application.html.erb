@@ -13,7 +13,7 @@
   <%= csrf_meta_tags %>
   <script type="text/javascript" src="/assets/html5-canvas-game-character-1.js"></script>
 </head>
-<body>
+<body class="home page themerex_body fullscreen top_panel_above theme_skin_kidscare">
 <!-- &&&&&&&&&&&&&&&&&&&&&&&&&&&&&& >>> novo tema &&&&&&&&&&&&&&&&&&&&&&&&&&&&&& -->
 <div class="main_content">
   <div class="boxedWrap">
@@ -23,6 +23,10 @@
 <%= yield %>
   </div> <!-- /.boxedWrap -->
 </div> <!-- /.main_content -->
+<div class="upToScroll">
+  <a href="#" class="addBookmark icon-star-empty" title="Add the current page into bookmarks"> </a>
+  <a href="#" class="scrollToTop icon-up-open-big" title="Back to top"> </a>
+</div>
 
   <%= javascript_include_tag 'vendor/jquery-1.11.3.min', 'vendor/jquery-migrate.min', 'vendor/revslider/rs-plugin/js/jquery.themepunch.tools.min', 'vendor/revslider/rs-plugin/js/jquery.themepunch.revolution.min', 'custom/__main', 'vendor/__packed', 'custom/shortcodes_init', 'custom/_utils', 'custom/_front' %>
 

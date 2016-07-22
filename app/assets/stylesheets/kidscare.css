@@ -715,13 +715,13 @@ pre.code,
     border: none;
     font-size: 14px; line-height: 55px; height: 55px;
     text-transform: uppercase; text-align: center; color: #292929;
-    background: transparent url("../images/curve_btn.html") no-repeat center center !important;
+    background: transparent url("/assets/newtheme/curve_btn.html") no-repeat center center !important;
     padding-left: 10px;
     padding-right: 10px;
 }
 .squareButton.curveButton.right a,
 .squareButton.curveButton.right button,
-.squareButton.curveButton.right span { background-image: url("../images/curve_btn_right.png") !important; }
+.squareButton.curveButton.right span { background-image: url("/assets/newtheme/curve_btn_right.png") !important; }
 .squareButton.curveButton > a:hover,
 .squareButton.curveButton > button:hover { color: #EA624C; }
 
@@ -730,13 +730,13 @@ pre.code,
 .squareButton.curveButton.mini button,
 .squareButton.curveButton.mini span {
     font-size: 10px; line-height: 42px; height: 42px; min-width: 91px;
-    background: transparent url("../images/curve_btn_mini.html") no-repeat center center !important;
+    background: transparent url("/assets/newtheme/curve_btn_mini.html") no-repeat center center !important;
     padding-left: 5px;
     padding-right: 5px;
 }
 .squareButton.curveButton.mini.right a,
 .squareButton.curveButton.mini.right button,
-.squareButton.curveButton.mini.right span { background-image: url("../images/curve_btn_mini_right.html") !important; }
+.squareButton.curveButton.mini.right span { background-image: url("/assets/newtheme/curve_btn_mini_right.html") !important; }
 .squareButton.curveButton.mini > a:after,
 .squareButton.curveButton.mini > a:before,
 .squareButton.curveButton.mini > button:after,
@@ -747,13 +747,13 @@ pre.code,
 .squareButton.curveButton.medium button,
 .squareButton.curveButton.medium span {
     font-size: 12px; line-height: 51px; height: 51px; min-width: 103px;
-    background: transparent url("../images/curve_btn_medium.html") no-repeat center center !important;
+    background: transparent url("/assets/newtheme/curve_btn_medium.html") no-repeat center center !important;
     padding-left: 5px;
     padding-right: 5px;
 }
 .squareButton.curveButton.medium.right a,
 .squareButton.curveButton.medium.right button,
-.squareButton.curveButton.medium.right span { background-image: url("../images/curve_btn_medium_right.html") !important; }
+.squareButton.curveButton.medium.right span { background-image: url("/assets/newtheme/curve_btn_medium_right.html") !important; }
 .squareButton.curveButton.medium > a:after,
 .squareButton.curveButton.medium > a:before,
 .squareButton.curveButton.medium > button:after,
@@ -764,13 +764,13 @@ pre.code,
 .squareButton.curveButton.big button,
 .squareButton.curveButton.big span {
     font-size: 14px; line-height: 55px; height: 55px; min-width: 114px;
-    background: transparent url("../images/curve_btn_big.png") no-repeat center center !important;
+    background: transparent url("/assets/newtheme/curve_btn_big.png") no-repeat center center !important;
     padding-left: 5px;
     padding-right: 5px;
 }
 .squareButton.curveButton.big.right a,
 .squareButton.curveButton.big.right button,
-.squareButton.curveButton.big.right span { background-image: url("../images/curve_btn_big_right.html") !important; }
+.squareButton.curveButton.big.right span { background-image: url("/assets/newtheme/curve_btn_big_right.html") !important; }
 .squareButton.curveButton.big > a:after,
 .squareButton.curveButton.big > a:before,
 .squareButton.curveButton.big > button:after,
@@ -781,19 +781,19 @@ pre.code,
 .squareButton.curveButton.huge button,
 .squareButton.curveButton.huge span {
     font-size: 22px; line-height: 84px; height: 84px; min-width: 169px;
-    background: transparent url("../images/curve_btn_huge.png") no-repeat center center !important;
+    background: transparent url("/assets/newtheme/curve_btn_huge.png") no-repeat center center !important;
     padding-left: 0;
     padding-right: 10px;
 }
 .squareButton.curveButton.huge.short a,
 .squareButton.curveButton.huge.short button,
-.squareButton.curveButton.huge.short span { min-width: 145px; background-image: url("../images/curve_btn_huge_short.html") !important; }
+.squareButton.curveButton.huge.short span { min-width: 145px; background-image: url("/assets/newtheme/curve_btn_huge_short.html") !important; }
 .squareButton.curveButton.huge.right a,
 .squareButton.curveButton.huge.right button,
-.squareButton.curveButton.huge.right span { background-image: url("../images/curve_btn_huge_right.png") !important; }
+.squareButton.curveButton.huge.right span { background-image: url("/assets/newtheme/curve_btn_huge_right.png") !important; }
 .squareButton.curveButton.huge.right.short a,
 .squareButton.curveButton.huge.right.short button,
-.squareButton.curveButton.huge.right.short span { background-image: url("../images/curve_btn_huge_right_short.png") !important; }
+.squareButton.curveButton.huge.right.short span { background-image: url("/assets/newtheme/curve_btn_huge_right_short.png") !important; }
 .squareButton.curveButton.huge > a:after,
 .squareButton.curveButton.huge > a:before,
 .squareButton.curveButton.huge > button:after,
@@ -804,13 +804,13 @@ pre.code,
 .squareButton.curveButton.banner button,
 .squareButton.curveButton.banner span {
     font-size: 24px; line-height: 84px; height: 84px; min-width: 231px;
-    background: transparent url("../images/curve_btn_banner.png") no-repeat center center !important;
+    background: transparent url("/assets/newtheme/curve_btn_banner.png") no-repeat center center !important;
     padding-left: 0;
     padding-right: 10px;
 }
 .squareButton.curveButton.banner.right a,
 .squareButton.curveButton.banner.right button,
-.squareButton.curveButton.banner.right span { background-image: url("../images/curve_btn_banner_right.png") !important; }
+.squareButton.curveButton.banner.right span { background-image: url("/assets/newtheme/curve_btn_banner_right.png") !important; }
 .squareButton.curveButton.banner > a:after,
 .squareButton.curveButton.banner > a:before,
 .squareButton.curveButton.banner > button:after,
@@ -854,7 +854,7 @@ pre.code,
 
 .theme_skin_kidscare .sc_testimonials_style_2.with_aircraft .swiper-slide .sc_testimonials_item_content {}
 .theme_skin_kidscare .sc_testimonials_style_2.with_aircraft .swiper-slide .sc_testimonials_item_content .sc_testimonials_item_object {height: 96px; position: relative; overflow: hidden; margin-top: 70px; display: block;}
-.theme_skin_kidscare .sc_testimonials_style_2.with_aircraft .swiper-slide .sc_testimonials_item_content .sc_testimonials_item_object .object {height: 96px; width: 194px; position: absolute; top: 0; right: 0%; margin-right: -97px; background: transparent url("../images/object_2.png") no-repeat center center;}
+.theme_skin_kidscare .sc_testimonials_style_2.with_aircraft .swiper-slide .sc_testimonials_item_content .sc_testimonials_item_object .object {height: 96px; width: 194px; position: absolute; top: 0; right: 0%; margin-right: -97px; background: transparent url("/assets/newtheme/object_2.png") no-repeat center center;}
 
 .theme_skin_kidscare .sc_testimonials_style_2.with_aircraft .swiper-slide .sc_testimonials_item_content .sc_testimonials_item_object .object,
 .theme_skin_kidscare .sc_testimonials_style_2.with_aircraft .swiper-slide.swiper-slide-visible .sc_testimonials_item_content .sc_testimonials_item_object .object,
@@ -1089,7 +1089,7 @@ header.fixedTopMenu .topWrap .menuTopWrap.topMenuStyleLine > ul#mainmenu > li > 
 .upToScroll a.scrollToTop:before {content: ''; display: none;}
 .upToScroll a.scrollToTop {
 
-    background: transparent url("../images/object_3_main.png") no-repeat 50% 100%;
+    background: transparent url("/assets/newtheme/object_3_main.png") no-repeat 50% 100%;
     background-size: cover;
     width: 146px;
     height: 70px;
@@ -1116,7 +1116,7 @@ header.fixedTopMenu .topWrap .menuTopWrap.topMenuStyleLine > ul#mainmenu > li > 
 .upToScroll a.scrollToTop:before {
     content: '';
     display: block;
-    background: transparent url("../images/object_3_addon.png") no-repeat 50% 100%; background-size: cover;
+    background: transparent url("/assets/newtheme/object_3_addon.png") no-repeat 50% 100%; background-size: cover;
     width: 52px; height: 14px;
 
     animation-name: spining;
@@ -1146,7 +1146,7 @@ header.fixedTopMenu .topWrap .menuTopWrap.topMenuStyleLine > ul#mainmenu > li > 
     display: block;
     margin-top: 8px;
     margin-left: 59px;
-    background: transparent url("../images/object_3_small.png") no-repeat 50% 100%; background-size: cover;
+    background: transparent url("/assets/newtheme/object_3_small.png") no-repeat 50% 100%; background-size: cover;
     width: 8px; height: 30px;
 
     animation-name: rotating;
@@ -1217,12 +1217,12 @@ header.fixedTopMenu .topWrap .menuTopWrap.topMenuStyleLine > ul#mainmenu > li > 
 
 /* Footer
 ------------------------------------------------------------------- */
-.footerWrap.footerStyleLight {background: #f9fafb url("../images/pattern_7.png") repeat 50% 100%; border: none;}
+.footerWrap.footerStyleLight {background: #f9fafb url("/assets/newtheme/pattern_7.png") repeat 50% 100%; border: none;}
 .footerWrap.footerStyleDark {}
 
-/*.theme_skin_kidscare .contactFooterWrap.footerStyleLight {background: #ea624c url("../images/object_1.png") no-repeat 50% 100%; color: #ffffff;}*/
+/*.theme_skin_kidscare .contactFooterWrap.footerStyleLight {background: #ea624c url("/assets/newtheme/object_1.png") no-repeat 50% 100%; color: #ffffff;}*/
 .theme_skin_kidscare .contactFooterWrap.footerStyleLight {background: #ea624c; color: #ffffff;}
-/*.theme_skin_kidscare .contactFooterWrap.footerStyleDark {background: #143A43 url("../images/object_1.png") no-repeat 50% 100%; color: #ffffff;}*/
+/*.theme_skin_kidscare .contactFooterWrap.footerStyleDark {background: #143A43 url("/assets/newtheme/object_1.png") no-repeat 50% 100%; color: #ffffff;}*/
 .theme_skin_kidscare .contactFooterWrap.footerStyleDark {background: #143A43; color: #ffffff;}
 .contactFooterWrap.footerStyleLight .contactAddress {color: #ffffff;}
 .contactFooterWrap.footerStyleDark .contactAddress {color: #ffffff;}
@@ -1434,12 +1434,12 @@ header.fixedTopMenu .topWrap .menuTopWrap.topMenuStyleLine > ul#mainmenu > li > 
 .sc_line.sc_line_style_wavy {
     height: 22px !important;
     border: none !important;
-    background: transparent url("../images/line_wavy.png") repeat-x center center !important;
+    background: transparent url("/assets/newtheme/line_wavy.png") repeat-x center center !important;
 }
 .sc_line.sc_line_style_wavy_orange {
     height: 22px !important;
     border: none !important;
-    background: transparent url("../images/line_wavy_orange.png") repeat-x center center !important;
+    background: transparent url("/assets/newtheme/line_wavy_orange.png") repeat-x center center !important;
 }
 
 /* Team */
@@ -1494,20 +1494,20 @@ header.fixedTopMenu .topWrap .menuTopWrap.topMenuStyleLine > ul#mainmenu > li > 
 .sc_slider_fixheight_1 {height: 390px;}
 
 /* slider image */
-.slider_img_1 {background-image:url(../images/kidscare-02.jpg);width:100%;}
-.slider_img_2 {background-image:url(../images/kidscare-12.jpg);width:100%;}
-.slider_img_3 {background-image:url(../images/kidscare-04.jpg);width:100%;}
-.slider_img_4 {width:100%;height:390px;;background-image:url(../images/kidscare-04-507x390.jpg);width:100%;}
-.slider_img_5 {width:100%;height:390px;;background-image:url(../images/kidscare-02-585x390.jpg);width:100%;}
-.slider_img_6 {width:100%;height:390px;;background-image:url(../images/kidscare-12-520x390.jpg);width:100%;}
+.slider_img_1 {background-image:url(/assets/newtheme/kidscare-02.jpg);width:100%;}
+.slider_img_2 {background-image:url(/assets/newtheme/kidscare-12.jpg);width:100%;}
+.slider_img_3 {background-image:url(/assets/newtheme/kidscare-04.jpg);width:100%;}
+.slider_img_4 {width:100%;height:390px;;background-image:url(/assets/newtheme/kidscare-04-507x390.jpg);width:100%;}
+.slider_img_5 {width:100%;height:390px;;background-image:url(/assets/newtheme/kidscare-02-585x390.jpg);width:100%;}
+.slider_img_6 {width:100%;height:390px;;background-image:url(/assets/newtheme/kidscare-12-520x390.jpg);width:100%;}
 
-.slider_img_8 {background-image:url(../images/kidscare-16-714x402.jpg);width:100%;}
-.slider_img_9 {background-image:url(../images/kidscare-15-714x402.jpg);width:100%;}
-.slider_img_10 {background-image:url(../images/kidscare-19-714x402.jpg);width:100%;}
+.slider_img_8 {background-image:url(/assets/newtheme/kidscare-16-714x402.jpg);width:100%;}
+.slider_img_9 {background-image:url(/assets/newtheme/kidscare-15-714x402.jpg);width:100%;}
+.slider_img_10 {background-image:url(/assets/newtheme/kidscare-19-714x402.jpg);width:100%;}
 
-.slider_img_11 {background-image:url(../images/kidscare-16-1150x647.jpg);width:100%;}
-.slider_img_12 {background-image:url(../images/kidscare-17-1150x647.jpg);width:100%;}
-.slider_img_13 {background-image:url(../images/kidscare-18-1150x647.jpg);width:100%;}
+.slider_img_11 {background-image:url(/assets/newtheme/kidscare-16-1150x647.jpg);width:100%;}
+.slider_img_12 {background-image:url(/assets/newtheme/kidscare-17-1150x647.jpg);width:100%;}
+.slider_img_13 {background-image:url(/assets/newtheme/kidscare-18-1150x647.jpg);width:100%;}
 
 .theme_skin_kidscare .sc_title_icon.sc_size_huge {width: 137px;}
 .theme_skin_kidscare h6.sc_title.sc_title_iconed {line-height: 19px; letter-spacing: -0.5px;}
@@ -1871,14 +1871,14 @@ a:hover > .sc_title_icon,
 .sliderHomeBullets.slider_alias_15 .order a:hover { background-color: #ffffff; }
 .sliderHomeBullets.slider_alias_15 .order a:before { display: none; }
 
-.sliderHomeBullets.slider_alias_15 .slide-1 .fonBlock { background-image: url(../images/kidscare-slide-1.jpg); }
+.sliderHomeBullets.slider_alias_15 .slide-1 .fonBlock { background-image: url(/assets/newtheme/kidscare-slide-1.jpg); }
 .sliderHomeBullets.slider_alias_15 .slide-1 .imageBlock { top: 42%;}
 .sliderHomeBullets.slider_alias_15 .slide-1 .imageBlock img { height: 12.5%;}
 .sliderHomeBullets.slider_alias_15 .slide-1 .textBlock.title { top: 58%; }
 .sliderHomeBullets.slider_alias_15 .slide-1 .textBlock.text { top: 68%;  }
 .sliderHomeBullets.slider_alias_15 .slide-1 .textBlock.text div { font-size: 1.72em; }
 
-.sliderHomeBullets.slider_alias_15 .slide-2 .fonBlock { background-image: url(../images/kidscare-slide-2.jpg); }
+.sliderHomeBullets.slider_alias_15 .slide-2 .fonBlock { background-image: url(/assets/newtheme/kidscare-slide-2.jpg); }
 .sliderHomeBullets.slider_alias_15 .slide-2 .imageBlock { top: 41.5%; left: auto; right:0; }
 .sliderHomeBullets.slider_alias_15 .slide-2 .imageBlock img { height: 15.6%; }
 .sliderHomeBullets.slider_alias_15 .slide-2 .textBlock { left: auto; right:0; }
@@ -1888,7 +1888,7 @@ a:hover > .sc_title_icon,
 .sliderHomeBullets.slider_alias_15 .slide-2 .textBlock.text div { font-size: 1.29em; padding-bottom: 1.5em; border-bottom:1px solid rgba(255,255,255,0.4); }
 .sliderHomeBullets.slider_alias_15 .slide-2 .order { top: 76%; left: auto; right:0; }
 
-.sliderHomeBullets.slider_alias_15 .slide-3 .fonBlock { background-image: url(../images/kidscare-slide-3.jpg); }
+.sliderHomeBullets.slider_alias_15 .slide-3 .fonBlock { background-image: url(/assets/newtheme/kidscare-slide-3.jpg); }
 .sliderHomeBullets.slider_alias_15 .slide-3 .imageBlock { top: 26.4%; left: auto; right:0; }
 .sliderHomeBullets.slider_alias_15 .slide-3 .imageBlock img { height: 17.1%; }
 .sliderHomeBullets.slider_alias_15 .slide-3 .textBlock { left: auto; right:0; }
@@ -1897,16 +1897,16 @@ a:hover > .sc_title_icon,
 .sliderHomeBullets.slider_alias_15 .slide-3 .textBlock.text div { font-size: 1.15em; }
 .sliderHomeBullets.slider_alias_15 .slide-3 .order { top: 63%; left: auto; right:0; }
 
-.sliderHomeBullets.slider_alias_15 .slideContent:before { content: ''; position:absolute; left:0; top:0; bottom:0; right:0; background-color:rgba(0,0,0,0.2); z-index:3; background-image:url(../images/bg/texture_3.html); }
+.sliderHomeBullets.slider_alias_15 .slideContent:before { content: ''; position:absolute; left:0; top:0; bottom:0; right:0; background-color:rgba(0,0,0,0.2); z-index:3; background-image:url(/assets/newtheme/bg/texture_3.html); }
 
 
 /* New Fullscreen Slider ROYAL 16
 ---------------------------------------------------------------------- */
 
 /* bg images */
-.sliderHomeBullets.slider_alias_16 .slide-1 .fonBlock { background-image: url(../images/kidscare-slide-1.jpg); }
-.sliderHomeBullets.slider_alias_16 .slide-2 .fonBlock { background-image: url(../images/kidscare-slide-2.jpg); }
-.sliderHomeBullets.slider_alias_16 .slide-3 .fonBlock { background-image: url(../images/kidscare-slide-3.jpg); }
+.sliderHomeBullets.slider_alias_16 .slide-1 .fonBlock { background-image: url(/assets/newtheme/kidscare-slide-1.jpg); }
+.sliderHomeBullets.slider_alias_16 .slide-2 .fonBlock { background-image: url(/assets/newtheme/kidscare-slide-2.jpg); }
+.sliderHomeBullets.slider_alias_16 .slide-3 .fonBlock { background-image: url(/assets/newtheme/kidscare-slide-3.jpg); }
 
 /* slide 1 */
 .sliderHomeBullets.slider_alias_16 .slide-1 .image { width: 13.5em; position: absolute; top: 50%; left: 10%; right: auto; /*z-index: 1;*/ margin: -17em 0 0 0 ;}
@@ -1914,7 +1914,7 @@ a:hover > .sc_title_icon,
 .sliderHomeBullets.slider_alias_16 .slide-1 .textBlock .title { font-size: 1em; }
 .sliderHomeBullets.slider_alias_16 .slide-1 .textBlock p {
     font-size: .8em; line-height: 1em;
-    background-image: url(../images/fullscreen-slide-4-21.png);  background-repeat: no-repeat; background-position: right bottom; padding: 0 1.2em 0 0;
+    background-image: url(/assets/newtheme/fullscreen-slide-4-21.png);  background-repeat: no-repeat; background-position: right bottom; padding: 0 1.2em 0 0;
     -webkit-background-size: 1em 2em;
     -moz-background-size: 1em 2em;
     -o-background-size: 1em 2em;
@@ -1941,16 +1941,16 @@ a:hover > .sc_title_icon,
 /* overlay */
 .sliderHomeBullets.slider_alias_16 .slideContent:before {
     content: ''; position: absolute; left: 0; top: 0; bottom: 0; right: 0; z-index: 3;
-    background-color: rgba(0, 0, 0, 0.3); background-image: url(../images/texture_2.png);
+    background-color: rgba(0, 0, 0, 0.3); background-image: url(/assets/newtheme/texture_2.png);
 }
 
 /* New Fullscreen Slider ROYAL 17
 ---------------------------------------------------------------------- */
 
 /* bg images */
-.sliderHomeBullets.slider_alias_17 .slide-1 .fonBlock { background-image: url(../images/kidscare-slide-1.jpg); }
-.sliderHomeBullets.slider_alias_17 .slide-2 .fonBlock { background-image: url(../images/kidscare-slide-2.jpg); }
-.sliderHomeBullets.slider_alias_17 .slide-3 .fonBlock { background-image: url(../images/kidscare-slide-3.jpg); }
+.sliderHomeBullets.slider_alias_17 .slide-1 .fonBlock { background-image: url(/assets/newtheme/kidscare-slide-1.jpg); }
+.sliderHomeBullets.slider_alias_17 .slide-2 .fonBlock { background-image: url(/assets/newtheme/kidscare-slide-2.jpg); }
+.sliderHomeBullets.slider_alias_17 .slide-3 .fonBlock { background-image: url(/assets/newtheme/kidscare-slide-3.jpg); }
 
 /* slide 1 */
 .sliderHomeBullets.slider_alias_17 .slide-1 .image { width: 13.5em; position: absolute; top: 50%; left: 10%; right: auto; /*z-index: 1;*/ margin: -17em 0 0 0 ;}
@@ -1958,7 +1958,7 @@ a:hover > .sc_title_icon,
 .sliderHomeBullets.slider_alias_17 .slide-1 .textBlock .title { font-size: 1em; }
 .sliderHomeBullets.slider_alias_17 .slide-1 .textBlock p {
     font-size: .8em; line-height: 1em;
-    background-image: url(../images/fullscreen-slide-4-21.png);  background-repeat: no-repeat; background-position: right bottom; padding: 0 1.2em 0 0;
+    background-image: url(/assets/newtheme/fullscreen-slide-4-21.png);  background-repeat: no-repeat; background-position: right bottom; padding: 0 1.2em 0 0;
     -webkit-background-size: 1em 2em;
     -moz-background-size: 1em 2em;
     -o-background-size: 1em 2em;
@@ -1985,12 +1985,12 @@ a:hover > .sc_title_icon,
 /* overlay */
 .sliderHomeBullets.slider_alias_17 .slideContent:before {
     content: ''; position: absolute; left: 0; top: 0; bottom: 0; right: 0; z-index: 3;
-    background-color: rgba(0, 0, 0, 0.3); background-image: url(../images/texture_6.png);
+    background-color: rgba(0, 0, 0, 0.3); background-image: url(/assets/newtheme/texture_6.png);
 }
 
 .mainslider_5 .royalSlider{width: 100%;}
 
-/*.fullScreenSlider .sliderHomeBullets.slider_alias_11 .slideContent:before { background-image:url(../images/texture_6.png); }*/
+/*.fullScreenSlider .sliderHomeBullets.slider_alias_11 .slideContent:before { background-image:url(/assets/newtheme/texture_6.png); }*/
 
 /* New Fullscreen Slider ROYAL 12
 ---------------------------------------------------------------------- */
@@ -2000,7 +2000,7 @@ a:hover > .sc_title_icon,
 .sliderHomeBullets.slider_alias_12 .slide-1 .textBlock .title { font-size: 2.7em; }
 .sliderHomeBullets.slider_alias_12 .slide-1 .textBlock p {
     font-size: 2em; line-height: 1.3em;
-    background-image: url(../images/fullscreen-slide-4-21.png);  background-repeat: no-repeat; background-position: right bottom; padding: 0 1.2em 0 0;
+    background-image: url(/assets/newtheme/fullscreen-slide-4-21.png);  background-repeat: no-repeat; background-position: right bottom; padding: 0 1.2em 0 0;
 	background-size: 1em 2em;
 	-webkit-background-size: 1em 2em;
 	-o-background-size: 1em 2em;
@@ -2035,7 +2035,7 @@ a:hover > .sc_title_icon,
     font-family: 'Fredoka One', cursive; font-weight: 400;
     color: #292929;
     background-color: transparent;
-    background-image: url("../images/curve_btn_right.png") !important;
+    background-image: url("/assets/newtheme/curve_btn_right.png") !important;
     background-size: 100% 100%;
     padding: 1.4em 1.5em;
 }
@@ -2057,7 +2057,7 @@ a:hover > .sc_title_icon,
 }
 .sliderHomeBullets.slider_alias_13 .textPrice:before {
 	content: ''; position: absolute; bottom: 65px; left: 0; width: 220px; height: 300px; z-index: -1;
-	background: transparent url(../images/babbysitter-slider-cloud-1a.png) no-repeat center bottom;
+	background: transparent url(/assets/newtheme/babbysitter-slider-cloud-1a.png) no-repeat center bottom;
 }
 .sliderHomeBullets.slider_alias_13 .textPrice span { font-size:1.5em; display: inline-block; }
 .sliderHomeBullets.slider_alias_13 .slide-1 .image  { top: auto; bottom: 5%; left: 50%; width: 40%; }
@@ -2374,26 +2374,26 @@ p.pd-sm {padding-bottom: 10px;}
 
 
 /* parallax */
-.parallax_image_1 {background-image:url(../images/babbysitter-parallax-1.jpg); background-position:50% 50%;}
+.parallax_image_1 {background-image:url(/assets/newtheme/babbysitter-parallax-1.jpg); background-position:50% 50%;}
 .parallax_image_1 .sc_content {margin-top:90px; margin-bottom:90px;}
 
-.parallax_image_2 {background-image:url(../images/healthcare-parallax-1.jpg); background-position:50% 50%;}
+.parallax_image_2 {background-image:url(/assets/newtheme/healthcare-parallax-1.jpg); background-position:50% 50%;}
 .parallax_image_2 .sc_content {margin-top:90px; margin-bottom:90px;}
 
-.parallax_image_3 {background-image:url(../images/learnplay-parallax-1.jpg); background-position:50% 50%;}
+.parallax_image_3 {background-image:url(/assets/newtheme/learnplay-parallax-1.jpg); background-position:50% 50%;}
 .parallax_image_3 .sc_content {margin-top:90px;margin-bottom:0;}
 
-.parallax_image_4 {background-image:url(../images/kidscare-parallax-5-small.png); background-position:50% 50%;}
+.parallax_image_4 {background-image:url(/assets/newtheme/kidscare-parallax-5-small.png); background-position:50% 50%;}
 
-.parallax_image_5 {background-image:url(../images/kidscare-parallax-8.png); background-position:50% 50%;}
+.parallax_image_5 {background-image:url(/assets/newtheme/kidscare-parallax-8.png); background-position:50% 50%;}
 .parallax_image_5 .sc_parallax_overlay {background-color:rgba(0,0,0,0.65);}
 .parallax_image_5 .sc_parallax_overlay > .sc_section{margin-top:5em !important;margin-right:auto !important;margin-bottom:2em !important;margin-left:auto !important;width:90%;}
 
-.parallax_image_6 {background-image:url(../images/kidscare-parallax-6-small.png); background-position:50% 50%;}
+.parallax_image_6 {background-image:url(/assets/newtheme/kidscare-parallax-6-small.png); background-position:50% 50%;}
 .parallax_image_6 .sc_parallax_overlay {background-color:rgba(0,0,0,0.65);}
 .parallax_image_6 > .sc_columns{margin-top:5em;margin-bottom:5em;}
 
-.parallax_image_7 {background-image:url(../images/kidscare-parallax-2.png); background-position:50% 50%;}
+.parallax_image_7 {background-image:url(/assets/newtheme/kidscare-parallax-2.png); background-position:50% 50%;}
 .parallax_image_7 .sc_parallax_overlay {background-color:rgba(0,0,0,0.6);}
 .parallax_image_7 .sc_parallax_overlay > .sc_section{margin-top:13em !important;margin-bottom:11em !important;}
 
@@ -2404,26 +2404,26 @@ p.pd-sm {padding-bottom: 10px;}
 
 /* social images */
 .twitter_image,
-.twitter_image > span {background-image: url(../images/twitter.png);}
+.twitter_image > span {background-image: url(/assets/newtheme/twitter.png);}
 
 .facebook_image,
-.facebook_image > span {background-image: url(../images/facebook.png);}
+.facebook_image > span {background-image: url(/assets/newtheme/facebook.png);}
 
 .gplus_image,
-.gplus_image > span {background-image: url(../images/gplus.png);}
+.gplus_image > span {background-image: url(/assets/newtheme/gplus.png);}
 
 .dribbble_image,
-.dribbble_image > span {background-image: url(../images/dribbble.png);}
+.dribbble_image > span {background-image: url(/assets/newtheme/dribbble.png);}
 
 .pinterest_image,
-.pinterest_image > span {background-image: url(../images/pinterest.png);}
+.pinterest_image > span {background-image: url(/assets/newtheme/pinterest.png);}
 
 .linkedin_image,
-.linkedin_image > span {background-image: url(../images/linkedin.png);}
+.linkedin_image > span {background-image: url(/assets/newtheme/linkedin.png);}
 
 .vimeo_image,
-.vimeo_image > span {background-image: url(../images/vimeo.png);}
+.vimeo_image > span {background-image: url(/assets/newtheme/vimeo.png);}
 
 .rss_image,
-.rss_image > span {background-image: url(../images/rss.png);}
+.rss_image > span {background-image: url(/assets/newtheme/rss.png);}
 
