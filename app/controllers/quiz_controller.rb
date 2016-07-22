@@ -40,9 +40,9 @@ class QuizController < ApplicationController
         @question = Question.where(statement: params[:statement]).first
         @lesson = Lesson.where(subject: @question.lesson).first
         @character = Character.where(user_id: current_user).first
-        @win = false
+        @state = 'jogando'
         @result = @score
-        @done_lessons = DoneLesson.where("lesson_id = ? AND character_id = ?", @lesson.id, @character.id).order(id: :asc).first
+        @done_lesson = DoneLesson.where("lesson_id = ? AND character_id = ?", @lesson.id, @character.id).order(id: :asc).first
 
         if @done_lesson == nil
           @done_lesson = DoneLesson.new
@@ -56,7 +56,7 @@ class QuizController < ApplicationController
           @character.wrong += 5 - @result
           @character.xp += @xp_mult
           @character.gold += @gold_mult
-          @win = true
+          @state = 'ganhou'
           if @character.xp >= 200
             @character.xp = 0
             @character.level += 1
@@ -71,22 +71,24 @@ class QuizController < ApplicationController
           @character.wrong += 5 - @result
           @character.xp += @xp_mult
           @character.gold += @gold_mult
-          @win = true
+          @state = 'ganhou'
           if @character.xp >= 200
             @character.xp = 0
             @character.level += 1
           end
           @character.save
+        elsif @done_lesson.score >= @result
+          @state = 'empatou'
         end
-      respond_to do |format|
-        format.js {render :template => "quiz/answer.js.erb"}
-      end
-    elsif @life <=0
-          @win = false
           respond_to do |format|
             format.js {render :template => "quiz/answer.js.erb"}
           end
-    else
+       elsif @life <=0
+          @state = 'perdeu'
+          respond_to do |format|
+            format.js {render :template => "quiz/answer.js.erb"}
+          end
+       else
       @questions = params[:questions]
       @current_question = @questions[@i]
       @current_question = Question.find(@current_question)

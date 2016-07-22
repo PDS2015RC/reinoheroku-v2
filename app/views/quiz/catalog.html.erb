@@ -8,20 +8,20 @@
 
 
 					<% @lessons_for_print.each do |lesson| %>
-						
+
 						<!--
 							<%= link_to lesson.subject, quiz_index_path(:subject => lesson.subject, :url => lesson.url ) %>
 						-->
-					
-							
-							<div class="row">    
+
+
+							<div class="row">
 							  <br>
 							  <div class="col-md-2 col-sm-3 text-center">
 							    <a class="story-title" href="<%= quiz_index_path(:subject => lesson.subject, :url => lesson.url ) %>">
 								<% if(@done_lessons!=nil) %>
 								<% @done_lessons.each do |done_lesson| %>
 									<%if done_lesson.lesson_id == lesson.id%>
-										<% (1..done_lesson.score).each do %>
+										<% for i in 1..done_lesson.score do %>
 											<span class="glyphicon glyphicon-star"></span>
 										<% end %>
 									<%end%>
@@ -39,8 +39,8 @@
 							      <div class="col-xs-3"></div>
 							    </div>
 							    <br><br>
-							  </div>            
-							</div>							
+							  </div>
+							</div>
 							<hr>
 
 					<% end %>
