@@ -1,43 +1,57 @@
-<h2 class="text-center">Seu Personagem</h2>
 
-<div class="container">
-<br>
-<div class="row">
-  <div role="main" class="col-md-3 thumbnail col-char">
+<section class="no_padding main">
+  <div class="container">
+    <h1 class="post_title entry-title">Seu Personagem</h1>
+    <div class="sc_line sc_line_style_dashed"></div>
+    <div class="post_text_area">
+      <div class="columnsWrap sc_columns no_margin sc_columns_count_4 margin_top_small">
+        <%if @characters.size >= 1%>
+          <% @characters.each do |character| %>
+            <div class="columns1_4 sc_column_item sc_column_item_1 odd first">
+              <h2><%= character.name %></h2>
+              <h3>Level: <%= character.level %></h3>
+              <h3>xp: <%= character.xp %></h3>
+              <h3>Gold: <%= character.gold %></h3>
+            </div>
+            <div class="columns1_4 sc_column_item sc_column_item_4 even after_span_2">
+              <h3>Inventario: </h3>
+              <%= link_to image_tag("bag.png", :border => 0, :class => 'list_image'), inventories_url %>
+            </div>
+            <div class="columns2_4 sc_column_item sc_column_item_2 even span_2">
+              <div id="canvasDiv"></div>
+              <script type="text/javascript">
+                prepareCanvas(document.getElementById("canvasDiv"), 490, 220, "<%= @character.helmet%>", "<%= @character.armor%>", "<%= @character.shield%>", "<%= @character.weapon%>");
+                change('hair', "<%= character.hair %>");
+                change('torso', "<%= character.shirt %>");
+                change('legs', "<%= character.pants %>");
+                if("<%= character.skin %>" != "default"){
+                  change('head', "head_" + "<%= character.skin %>");
+                  change('leftArm', "leftArm_" + "<%= character.skin %>");
+                  change('rightArm', "rightArm_" + "<%= character.skin %>");
+                }
+              </script>
 
-    <%if @characters.size >= 1%>
-    <% @characters.each do |character| %>
-    <h2><%= character.name %></h2>
-    <h3>Level: <%= character.level %></h3>
-    <h3>xp: <%= character.xp %></h3>
-    <h3>Gold: <%= character.gold %></h3>
-  </div>
-  <div class="col-md-1 col-char">
-    
-  </div>
-  
-  <aside role="complementary" class="col-md-8 col-char">
-  <h3>Inventario: </h3>
-  <%= link_to image_tag("bag.png", :border => 0, :class => 'list_image'), inventories_url %>
-  <div id="canvasDiv"></div>
-    <script type="text/javascript">
-    prepareCanvas(document.getElementById("canvasDiv"), 490, 220, "<%= @character.helmet%>", "<%= @character.armor%>", "<%= @character.shield%>", "<%= @character.weapon%>");
-    change('hair', "<%= character.hair %>");
-    change('torso', "<%= character.shirt %>");
-    change('legs', "<%= character.pants %>");
-    if("<%= character.skin %>" != "default"){
-    change('head', "head_" + "<%= character.skin %>");
-    change('leftArm', "leftArm_" + "<%= character.skin %>");
-    change('rightArm', "rightArm_" + "<%= character.skin %>");
-    }
-    </script>
-    <%= link_to 'Deletar', character, method: :delete, data: { confirm: 'Cuidado, tem certeza que quer deletar seu personagem?' }, class: "btn btn-danger" %>
-    <br><br>
-    <% end %>
-    <% else %>
-    <h2>Voce ainda não tem um personagem</h2>
-    <%= link_to 'New Character', new_character_path %>
-    <% end %>
-    </aside>
-</div>
-</div>
+            </div>
+
+            <div class="sc_button sc_button_style_dark  sc_button_size_mini squareButton fullSize dark  mini  ico margin_bottom_mini" >
+              <%= link_to 'Deletar', character, method: :delete, data: { confirm: 'Cuidado, tem certeza que quer deletar seu personagem?' }, class: "" %>
+            </div>
+          <% end %>
+        <% else %>
+        <div class="columns4_4">
+          <h2>Voce ainda não tem um personagem</h2>
+          <%= link_to 'New Character', new_character_path %>
+        </div>
+        <% end %>
+        <div class="columns4_4">
+
+        </div>
+      </div>
+
+        <div class="sc_line sc_line_style_dashed"></div>
+
+    </div> <!-- /post_text_area-->
+  </div> <!-- /container -->
+</section>
+
+

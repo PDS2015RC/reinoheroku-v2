@@ -1,16 +1,23 @@
 <!-- %%%%%%%%%%%%%%%%%% >>> box hidden 1 %%%%%%%%%%%%%%%%%% -->
 <%= form_tag(@path, method: 'post', :remote => true) do%>
 <div id="alternative" >
-  <div class="container-fluid ">
-    <header class="row">
-      <div class="col-xs-6">
-        <div class="progress">
-          <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow=<%=@i%> aria-valuemin="0" aria-valuemax=<%=@questions.size%> style="width: <%=(@i*100)/@questions.size%>%;">
-          <%=(@i*100)/@questions.size%>%
+  <div class="">
+    <header class="columnsWrap sc_columns no_margin sc_columns_count_3">
+      <div class="columns2_3 sc_column_item sc_column_item_1 odd first">
+
+          <div class="sc_skills sc_skills_bar sc_skills_horizontal" data-type="bar" data-subtitle="Skills" data-dir="horizontal">
+             <div class="sc_skills_item sc_skills_style_1 odd first">
+               <div class="sc_skills_count">
+                 <div class="sc_skills_total" data-start="0" data-stop="<%=@questions.size%>" data-step="1" data-max="100" data-speed="35" data-duration="3430" data-ed="%">
+                   <%=(@i*100)/@questions.size%>%
+                 </div>
+                </div>
+              </div>
           </div>
-        </div>
+
       </div>
-      <div class="col-xs-4 col-xs-offset-2 text-right ">
+
+      <div class="columns1_3 sc_column_item sc_column_item_2 even alignRight " style="text-align: right">
         <h4><span>Vidas</span> &nbsp;
         <% for i in 1..(@character_life.to_i-@life.to_i) %>
             <i class="fa fa-heart-o" aria-hidden="true"></i>
@@ -22,13 +29,13 @@
       </div>
     </header>
     <hr>
-    <main class="row" >
-      <div class="col-xs-8 col-xs-offset-2 text-center"><h3>Marque a alternativa correta</h3></div> <div class="col-xs-2"></div>
-      <div class="-col-xs-8 col-xs-offset-2">
-        <div class="col-xs-4">
+    <main class="columnsWrap sc_columns no_margin sc_columns_count_3" >
+      <div class="columns3_3 sc_column_item sc_column_item_1 odd first aligncenter "><h3>Marque a alternativa correta</h3></div> <div class="col-xs-2"></div>
+      <div class="columnsWrap sc_columns no_margin sc_columns_count_4 margin_top_small">
+        <div class="columns2_4 sc_column_item sc_column_item_1 odd first">
           <p><%= @current_question.statement %> </p>
         </div>
-        <div class="col-xs-8">
+        <div class="columns2_4 sc_column_item sc_column_item_2 even">
           <% @alternativas = [@current_question.a, @current_question.b, @current_question.c, @current_question.d] %>
           <% @alternativas.shuffle! %>
           <ul>
@@ -53,13 +60,21 @@
     <br>
     <br>
     <hr>
-    <footer class="row">
-      <div class="col-xs-6">
-        <button type="button" class="btn btn-primary btn-sm">Pular</button>
+    <footer class="columnsWrap sc_columns no_margin sc_columns_count_4 margin_top_small">
+
+      <div class="columns1_4 sc_column_item sc_column_item_1 odd first"></div>
+      <div class="columns1_4 sc_column_item sc_column_item_2 even"></div>
+      <div class="columns1_4 sc_column_item sc_column_item_3 odd" style="text-align: right">
+        <div class="sc_button sc_button_style_global sc_button_size_medium squareButton fullSize global medium  ico margin_bottom_mini">
+          <a href="#" class="icon-code">Pular</a>
+        </div>
       </div>
-      <div class="col-xs-6 text-right">
-        <%= submit_tag "Verificar", class: "btn btn-primary btn-sm" %>
+      <div class="columns1_4 sc_column_item sc_column_item_4 even" style="text-align: right">
+        <div class="sc_button sc_button_style_global sc_button_size_medium squareButton fullSize global medium  ico margin_bottom_mini"  style="text-align: right">
+          <%= submit_tag "Verificar", class: "" %>
+        </div>
       </div>
+
     </footer>
   </div>
 </div>
