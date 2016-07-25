@@ -13,7 +13,7 @@
 
             <div class="col-sm-12">
              <% if @character && @character.xp != nil %>
-                <p class="lead"><%= current_user.name%></p>              
+                <p class="lead"><%= current_user.name%></p>
                 <p>Personagem: <%= @character.name %></p>
                 <p>Level: <%= @character.level %></p>
                 <p>Gold: <%= @character.gold %></p>
@@ -23,11 +23,11 @@
                     XP: <%= ((100*@character.xp)/200) %>%
                   </div>
                 </div>
-              <% else %>                
+              <% else %>
                 <div class="alert text-center" role="alert">
                   <h3>Você ainda não tem um personagem</h3>
                 </div>
-              <% end %>			
+              <% end %>
             </div>
 
           </div>
