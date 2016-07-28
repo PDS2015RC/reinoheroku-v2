@@ -44,7 +44,7 @@
             </li>
             <% if user_signed_in? %>
                 <li class="menu-item menu-item-has-children">
-                  <span class="menu_icon icon-note"></span>
+                  <!--<span class="menu_icon icon-note"></span>-->
                   <%= link_to "Sair", destroy_user_session_path, :method => 'delete' %>
                 </li>
             <% end %>
