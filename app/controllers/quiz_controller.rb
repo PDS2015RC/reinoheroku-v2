@@ -1,7 +1,6 @@
 class QuizController < ApplicationController
 
 
-
   def index
     @characters = Character.where(user_id: current_user)
     if(@characters.size >= 1)
