@@ -3,7 +3,7 @@
 <head>
   <title>Reino</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <%= stylesheet_link_tag 'application', 'vendor/revslider/rs-plugin/css/settings', '__packed', 'fontello/css/fontello', 'fontello/css/animation', 'style', 'shortcodes', 'kidscare', 'responsive', 'novo_reino', media: 'all', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag 'application', 'vendor/new-royalslider/lib/royalslider/royalslider', '__packed', 'fontello/css/fontello', 'fontello/css/animation', 'style', 'shortcodes', 'kidscare', 'responsive', 'novo_reino', media: 'all', 'data-turbolinks-track' => true %>
 
   <style id='theme-skin-inline-css' type='text/css'></style>
 
@@ -12,7 +12,8 @@
   <%= csrf_meta_tags %>
   <script type="text/javascript" src="/assets/html5-canvas-game-character-1.js"></script>
 </head>
-<body class="home page themerex_body fullscreen top_panel_above theme_skin_kidscare">
+<!--<body class="home page themerex_body fullscreen top_panel_above theme_skin_kidscare">-->
+<body class="page themerex_body fullscreen top_panel_below video_bg theme_skin_kidscare">
 <!-- &&&&&&&&&&&&&&&&&&&&&&&&&&&&&& >>> novo tema &&&&&&&&&&&&&&&&&&&&&&&&&&&&&& -->
 <div class="main_content">
   <div class="boxedWrap">
@@ -138,7 +139,7 @@
   <a href="#" class="scrollToTop icon-up-open-big" title="Back to top"> </a>
 </div>
 
-  <%= javascript_include_tag 'vendor/jquery-1.11.3.min', 'vendor/jquery-migrate.min', 'vendor/revslider/rs-plugin/js/jquery.themepunch.tools.min', 'vendor/revslider/rs-plugin/js/jquery.themepunch.revolution.min', 'custom/__main', 'vendor/__packed', 'custom/shortcodes_init', 'custom/_utils', 'custom/_front', 'vendor/diagram/diagram.raphael.min' %>
+  <%= javascript_include_tag 'vendor/jquery-1.11.3.min', 'vendor/jquery-migrate.min', 'vendor/new-royalslider/lib/royalslider/jquery.royalslider.min',  'vendor/__packed', 'custom/shortcodes_init', 'custom/_utils', 'custom/_front', 'custom/__main', 'vendor/diagram/diagram.raphael.min' %>
 
 </body>
 </html>
