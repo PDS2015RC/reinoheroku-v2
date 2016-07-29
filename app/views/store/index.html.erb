@@ -1,31 +1,40 @@
-<p id="notice"><%= notice %></p>
-<div class="container">
-<br>
-<div class="row">
-					<% @items.each do |item| %>
-                    <div class="col-sm-4 col-lg-4 col-md-4 ">
-                        <div class="thumbnail thumbnail2 marginItem">
-                        	<%= image_tag(item.img) %>
-                            <div class="caption">
-                                <h4 class="pull-right">Preço: <%= item.price %></h4>
-                                <h4><%= item.name %>
-                                </h4>
-                                <p></p>
-                            </div>
-                            <div class="ratings">
-                                <p>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                </p>
-                                <%= button_to 'Comprar', line_items_path(item_id: item), class: "btn btn-success dropdown-toggle" %>
-                            </div>
-                        </div>
-                    </div>
+<div class="mainWrap without_sidebar">
+  <div class="main">
+    <div class="content">
 
-                
-		<% end %>
+      <section class="no_margin no_padding">
+        <div class="container">
+
+          <div class="masonryWrap">
+            <p id="notice"><%= notice %></p>
+            <section class="masonry isotope" data-columns="3">
+              <% @items.each do |item| %>
+              <article class="isotopeElement post_format_standard even ">
+                <div class="isotopePadding">
+                  <div class="thumb hoverIncrease alignCenter" data-title="Summer Childcare Questions" style="min-height: 230px ;">
+                    <%= image_tag(item.img, style: 'width: 50%' ) %>
+                  </div>
+                  <h4 style="text-align: center">
+                    <a href="#" ><%= item.name %></a>
+                  </h4>
+                  <p>Armadura é uma vestimenta utilizada para proteção pessoal, originalmente de metal, usada por soldados, guerreiros e cavaleiros como uma forma de proteção às armas brancas durante uma batalha.</p>
+
+                    <h5 ><i class="fa fa-money" aria-hidden="true"></i> Preço <%= item.price %></h5>
+
+                  <div class="sc_button sc_button_style_global sc_button_size_mini squareButton fullSize global mini  ico margin_bottom_mini">
+                    <%= link_to 'Comprar', line_items_path(item_id: item), class: "icon-code" %>
+                  </div>
+                  <br>
+                  <span class="inlineShadow"></span>
                 </div>
+              </article>
+              <% end %>
+            </section>
+          </div>
+
+        </div>
+      </section>
+
+    </div>
+  </div>
 </div>
