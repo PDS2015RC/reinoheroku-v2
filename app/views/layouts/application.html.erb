@@ -7,7 +7,7 @@
 
   <style id='theme-skin-inline-css' type='text/css'></style>
 
-  <%= stylesheet_link_tag 'responsive' %>
+  <%= stylesheet_link_tag 'responsive'%>
 
   <%= csrf_meta_tags %>
   <script type="text/javascript" src="/assets/html5-canvas-game-character-1.js"></script>
@@ -20,7 +20,9 @@
   <div class="boxedWrap">
 <!-- &&&&&&&&&&&&&&&&&&&&&&&&&&&&&& <<< novo tema &&&&&&&&&&&&&&&&&&&&&&&&&&&&&& -->
 <%= render :partial => 'layouts/navbar' %>
-<%= render :partial => 'layouts/masthead' %>
+<% if user_signed_in?%>
+<div class="sc_line sc_line_style_solid margin_top_small margin_bottom_small"></div>
+<% end %>
 <%= yield %>
 
     <!--$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ >>> footer $$$$$$$$$$$$$$$$$$$$$$$$$$$$$-->
