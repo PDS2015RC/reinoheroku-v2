@@ -5,9 +5,7 @@ class AdminController < ApplicationController
     def admin_check
 
     	if current_user.admin == false
-
       		redirect_to main_index_path
-
     	end
 	end
 
