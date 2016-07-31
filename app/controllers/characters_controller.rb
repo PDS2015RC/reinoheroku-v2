@@ -5,22 +5,33 @@ class CharactersController < ApplicationController
   def index
     @characters = Character.where(user_id: current_user)
     @inventories = Inventory.where(user_id: current_user)
+    @line_items = @inventories.first.line_items
   end
 
   def addItem
     @character = Character.where(user_id: current_user).first
+    @inventories = Inventory.where(user_id: current_user)
+    @line_items = @inventories.first.line_items
+    @item_img = params[:item_img]
+    @item_part = params[:part]
     @character.add_item(params[:name], params[:item_img], params[:part])
     if @character.save
-    redirect_to :action => :index
+       respond_to do |format|
+          format.js {}
+      end
     end
   end
 
   def removeItem
     @character = Character.where(user_id: current_user).first
+    @inventories = Inventory.where(user_id: current_user)
+    @line_items = @inventories.first.line_items
     @character.remove_item(params[:part])
     if @character.save
-    redirect_to :action => :index
-    end
+      respond_to do |format|
+          format.js {}
+      end
+     end
   end
   # GET /characters/1
   # GET /characters/1.json
