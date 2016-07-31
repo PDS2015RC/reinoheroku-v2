@@ -57,7 +57,6 @@ class CharactersController < ApplicationController
     @character.shield = "none"
     @character.wrong = 0
     @character.correct = 0
-    debugger
     respond_to do |format|
       if @character.save && @inventory.save
         format.html { redirect_to characters_url, notice: 'Character was successfully created.' }
