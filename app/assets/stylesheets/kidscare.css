@@ -1452,7 +1452,7 @@ header.fixedTopMenu .topWrap .menuTopWrap.topMenuStyleLine > ul#mainmenu > li > 
 	border-radius: 10px;
 	-webkit-transform: translateZ(0) scale(1.0, 1.0);
 }
-.theme_skin_kidscare .sc_team .sc_team_item .sc_team_item_avatar:before {content:''; display:block; position:absolute; width:100%; height:100%; z-index: 3; margin-left: -4px; border-right: solid 4px rgba(27, 180, 185, 0.50);}
+.theme_skin_kidscare .sc_team .sc_team_item .sc_team_item_avatar:before {content:''; display:block; position:absolute; width:100%; height:0%; z-index: 3; margin-left: -4px; border-right: solid 4px rgba(27, 180, 185, 0.50);}
 .theme_skin_kidscare .sc_team .sc_team_item .sc_team_item_avatar:after {margin: 0; opacity: 0; -moz-opacity: 0; -khtml-opacity: 0; filter: alpha(opacity=0); -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"; background-color: #1BB4B9;}
 .theme_skin_kidscare .sc_team .sc_team_item .sc_team_item_info {padding-top: 35px; -webkit-transition: all 0.3s ease-out; -moz-transition: all 0.3s ease-out; -ms-transition: all 0.3s ease-out; -o-transition: all 0.3s ease-out; transition: all 0.3s ease-out;}
 .theme_skin_kidscare .sc_team .sc_team_item .sc_team_item_info .sc_team_item_title {font-family: 'Ubuntu', sans-serif; font-weight: 300;}
