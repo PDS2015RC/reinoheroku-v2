@@ -29,7 +29,7 @@ class LineItemsController < ApplicationController
     item = Item.find(params[:item_id])
     if item.price > @character.gold
       redirect_to store_index_path, notice: 'Voce não tem ouro suficiente'
-    else  
+    else
       @line_item = LineItem.new
       @line_item.inventory = @inventory
       @line_item.item = item
@@ -38,7 +38,7 @@ class LineItemsController < ApplicationController
 
       respond_to do |format|
         if @line_item.save
-          format.html { redirect_to inventories_url, notice: 'Novo item Comprado' }
+          format.html { redirect_to characters_url, notice: 'Novo item Comprado' }
           format.json { render :show, status: :created, location: @line_item }
         else
           format.html { render :new }

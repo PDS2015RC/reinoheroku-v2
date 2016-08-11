@@ -4,8 +4,10 @@ class CharactersController < ApplicationController
   # GET /characters.json
   def index
     @characters = Character.where(user_id: current_user)
-    @inventories = Inventory.where(user_id: current_user)
-    @line_items = @inventories.first.line_items
+    if @character != nil
+      @inventories = Inventory.where(user_id: current_user)
+      @line_items = @inventories.first.line_items
+    end
   end
 
   def addItem
