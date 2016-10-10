@@ -356,6 +356,10 @@
           <div class="sc_contact_form sc_contact_form_contact contact_form_1">
             <!--<form class="contact_1" method="post" action="include/contact-form.php">-->
             <h1 class="text-center title">Log in</h1>
+            <%= devise_error_messages! %>
+    <% flash.each do |key, value| %>
+       <div class="flash <%= key %>"><%= value %></div>
+    <% end %>
             <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
               <div class="columns4_4">
                 <%= f.label :email, style: 'color: #fff'  %>
